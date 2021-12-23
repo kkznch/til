@@ -2,7 +2,7 @@
 
 作業用リポジトリ
 
-https://github.com/kkznch/learn-nextjs-tutorial-basic
+https://github.com/kkznch/learn-nextjs-tutorial-basics
 
 ## Pre-rendering and Data Fetching
 ### Next.js は Pre-rendering に対応してるよ
