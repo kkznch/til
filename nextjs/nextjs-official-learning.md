@@ -68,6 +68,11 @@ export async function getStaticPaths() {
 }
 ```
 
+`fallback` プロパティについては以下を参照するとよい。
+
+[The fallback key (required)](https://nextjs.org/docs/basic-features/data-fetching#the-fallback-key-required)
+
+
 ## 参考
 - [Next.js](https://nextjs.org/learn/basics/create-nextjs-app)
 
