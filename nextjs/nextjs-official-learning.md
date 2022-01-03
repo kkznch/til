@@ -48,6 +48,26 @@ export async function getServerSideProps(context) {
 }
 ```
 
+## Dynamic Routes
+### getStaticPaths で静的パスの生成
+`getStaticProps` を使用して動的ルートにアクセスする際、以下のように `getStaticPaths` で指定したパスを静的にプリレンダリングしておくことができる。
+SPAではなくSSGの際に使用するもので、予めどういったパスにどういったコンテンツが存在するか、を定義するために使うものだはず。
+
+```js
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { 
+        params: {
+          id: 'hoge',
+        }
+      },
+    ],
+    fallback: true,
+  };
+}
+```
+
 ## 参考
 - [Next.js](https://nextjs.org/learn/basics/create-nextjs-app)
 
