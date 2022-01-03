@@ -73,6 +73,31 @@ export async function getStaticPaths() {
 [The fallback key (required)](https://nextjs.org/docs/basic-features/data-fetching#the-fallback-key-required)
 
 
+## API Routes
+### 基本的な使い方
+`pages/api` を作成し、以下の内容でファイルを作成する。
+```js:pages/api/hello.js
+export default function handler(req, res) {
+  res.status(200).json({ text: 'Hello' })
+}
+```
+
+以下にアクセスするとjson形式でデータが返ってくる。
+
+`http://localhost:3000/api/hello`
+
+
+### POST されたデータへのアクセス
+POSTされたデータにアクセスする場合は以下のように行う。
+```js
+export default function handler(req, res) {
+  const email = req.body.email
+  // Then save email to your database, etc...
+}
+```
+
+
 ## 参考
 - [Next.js](https://nextjs.org/learn/basics/create-nextjs-app)
+- [Next.js 日本語翻訳プロジェクト](https://nextjs-ja-translation-docs.vercel.app/docs/getting-started)
 
