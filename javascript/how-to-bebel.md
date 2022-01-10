@@ -13,6 +13,7 @@
 ```
 
 以下の内容でbabel設定ファイルを作成する。
+`corejs` プロパティを指定する際は、対応するバージョンのcorejsパッケージをインストールする必要があるらしいが、`@babel/preset-env` の依存パッケージに `core-js-compat` が含まれているため、明示的にインストールする必要はなさそう。
 ```js:babel.config.js
 module.exports = {
   presets: [
@@ -95,3 +96,4 @@ https://babeljs.io/docs/en/configuration
 
 ## 参考
 - [@babel/preset-env (Babel 7)をハンズオンでちゃんと理解する](https://zenn.dev/sa2knight/articles/67f6f5cc4ed5e26e391c)
+- [Babel7.4で非推奨になったbabel/polyfillの代替手段と設定方法](https://aloerina01.github.io/blog/2019-06-21-1)
